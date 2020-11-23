@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DCS Beginner Aid</string>
+    <string name="app_credits">Created by Max Delaney 2020</string>
+    <string name="app_logo">DCS Training Guide</string>
+    <string name="helicopter_tile_textView">Helicopter</string>
+    <string name="vehicle_tile_textView">Vehicle</string>
+    <string name="weapon_tile_textview">Weapon</string>
+    <string name="plane_tile_textView">Plane</string>
+    <string name="weapon_button">weapon_button</string>
+    <string name="vehicle_button">vehicle_button</string>
+    <string name="helicopter_button">helicopter_button</string>
+    <string name="plane_button">plane_button</string>
+</resources>
