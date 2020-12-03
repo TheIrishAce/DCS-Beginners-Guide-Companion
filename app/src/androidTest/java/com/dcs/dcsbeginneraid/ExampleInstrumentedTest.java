@@ -1,4 +1,4 @@
-package com.example.dcsbeginneraid;
+package com.dcs.dcsbeginneraid;
 
 import android.content.Context;
 

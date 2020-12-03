@@ -1,4 +1,4 @@
-package com.example.dcsbeginneraid;
+package com.dcs.dcsbeginneraid;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
