@@ -12,4 +12,13 @@
     <string name="plane_button">plane_button</string>
     <string name="navigation_drawer_open">"Open navigation drawer"</string>
     <string name="navigation_drawer_close">"Close navigation drawer"</string>
+    <string name="helicopter_list_title">Helicopter List</string>
+    <string name="splash_screen_disclaimer_body">This application is in no way affiliated or linked to Eagle Dynamics or their simulation product Dynamic Combat Simulator. \nThis application is a fan made project.</string>
+    <string name="splash_screen_disclaimer_title">Disclaimer</string>
+    <string name="pilot_photo_ham_item">Pilot Photo</string>
+    <string name="plane_list_title">Plane List</string>
+    <string name="vehicle_list_title">Vehicle List</string>
+    <string name="weapon_list_title">Weapon List</string>
+    <string name="ham_menu_title">DCS Training Guide</string>
+    <string name="ham_menu_subtitle">Designed for flight simulator pilots</string>
 </resources>

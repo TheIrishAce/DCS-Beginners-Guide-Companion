@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Ayudante de arranque</string>
+    <string name="app_credits">Creado por Max Delaney 2020</string>
+    <string name="app_logo">Guía de formación de DCS</string>
+    <string name="helicopter_tile_textView">Helicóptero</string>
+    <string name="vehicle_tile_textView">Vehículo</string>
+    <string name="weapon_tile_textview">Arma</string>
+    <string name="plane_tile_textView">Avión</string>
+    <string name="weapon_button">weapon_button</string>
+    <string name="vehicle_button">vehicle_button</string>
+    <string name="helicopter_button">helicopter_button</string>
+    <string name="plane_button">plane_button</string>
+    <string name="navigation_drawer_open">"Cajón de navegación abierto"</string>
+    <string name="navigation_drawer_close">"Cerrar cajón de navegación"</string>
+    <string name="helicopter_list_title">Lista de helicópteros</string>
+    <string name="splash_screen_disclaimer_body">Esta aplicación no está afiliada ni vinculada de ninguna manera a Eagle Dynamics o su producto de simulación Dynamic Combat Simulator. \ nEsta aplicación es un proyecto creado por un fan.</string>
+    <string name="splash_screen_disclaimer_title">Descargo de responsabilidad</string>
+    <string name="pilot_photo_ham_item">Foto piloto</string>
+    <string name="plane_list_title">Lista de planos</string>
+    <string name="vehicle_list_title">Lista de vehículos</string>
+    <string name="weapon_list_title">Lista de armas</string>
+    <string name="ham_menu_title">Guía de formación de DCS</string>
+    <string name="ham_menu_subtitle">Diseñado para pilotos de simuladores de vuelo.</string>
+</resources>

@@ -84,14 +84,7 @@ public class Menu extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.signout:
-                Toast.makeText(this, "Logged out!", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(Menu.this, MainActivity.class));
-                break;
-            case R.id.contact_me:
-                startActivity(new Intent(Menu.this, MainActivity.class));
-                break;
-            case R.id.credits:
+            case R.id.pilot_photo:
                 startActivity(new Intent(Menu.this, MainActivity.class));
                 break;
         }

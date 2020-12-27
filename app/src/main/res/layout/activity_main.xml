@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/the_irish_ace_logo" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/splash_screen_disclaimer_title"
         android:layout_width="119dp"
         android:layout_height="24dp"
         android:layout_alignParentBottom="true"
@@ -29,34 +29,34 @@
         android:layout_marginStart="144dp"
         android:layout_marginTop="339dp"
         android:layout_marginEnd="148dp"
-        android:text="Disclaimer"
+        android:text="@string/splash_screen_disclaimer_title"
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
         android:textSize="18sp"
         android:typeface="serif"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintBottom_toTopOf="@+id/splash_screen_disclaimer_body"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/splash_screen_credits"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/splash_screen_disclaimer_body"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="10dp"
-        android:text="This application is in no way affiliated or linked to Eagle Dynamics or their simulation product Dynamic Combat Simulator. \nThis application is a fan made project."
+        android:text="@string/splash_screen_disclaimer_body"
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
-        android:textSize="10sp"
+        android:textSize="12sp"
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/splash_screen_credits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
