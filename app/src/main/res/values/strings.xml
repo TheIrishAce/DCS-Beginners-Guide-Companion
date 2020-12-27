@@ -10,4 +10,6 @@
     <string name="vehicle_button">vehicle_button</string>
     <string name="helicopter_button">helicopter_button</string>
     <string name="plane_button">plane_button</string>
+    <string name="navigation_drawer_open">"Open navigation drawer"</string>
+    <string name="navigation_drawer_close">"Close navigation drawer"</string>
 </resources>

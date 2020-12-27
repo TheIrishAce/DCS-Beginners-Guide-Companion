@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GFree" parent="ThemeOverlay.AppCompat.DayNight.ActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="android:colorPrimary">@color/purple_700</item>
+        <!-- Secondary brand color. -->
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.RoundedButton" parent="ThemeOverlay.AppCompat.DayNight.ActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">false</item>
+        <item name="android:shape">oval</item>
+        <item name="colorPrimary">@color/transparent</item>
+        <item name="colorAccent">@color/transparent</item>
+        <item name="colorButtonNormal">@color/transparent</item>
+        <!-- Secondary brand color. -->
+        <item name="android:colorSecondary">@color/transparent</item>
+        <item name="android:bottomLeftRadius">180dp</item>
+        <item name="android:bottomRightRadius">180dp</item>
+        <item name="android:topLeftRadius">180dp</item>
+        <item name="android:topRightRadius">180dp</item>
+    </style>
+</resources>
