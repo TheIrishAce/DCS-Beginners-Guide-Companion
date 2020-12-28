@@ -42,16 +42,11 @@ public class Camera extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_camera);
         pilotImage = (ImageView) findViewById(R.id.imageView);
-
         pilotImageText = (TextView) findViewById(R.id.textView);
-
         Button bCamera = (Button) findViewById(R.id.buttonCamera);
-
         Button bGallery = (Button) findViewById(R.id.buttonGallery);
-
         bCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,10 +65,16 @@ public class Camera extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            //String imageFileName = "JPEG_" + timeStamp + "."+getFileExt(imageUri);
+            String imageFileName = "JPEG_" + timeStamp + ".";   //Used to set the image name dynamiclly.
+            //String imageFileName = "JPEG_DCS_PROFILE_IMG";   //Used to set the image name and overwrite it if it exists.
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             pilotImage.setImageBitmap(imageBitmap);
             pilotImageText.setText("Image captured by Camera");
+            MediaStore.Images.Media.insertImage(getContentResolver(), imageBitmap, imageFileName , "DCS");
+
         }
         if (requestCode == REQUEST_IMAGE_GET && resultCode == RESULT_OK) {
             //Bitmap thumbnail = data.getParceable("data");
@@ -81,7 +82,7 @@ public class Camera extends AppCompatActivity {
             // Do work with photo saved at fullPhotoUri
             try {
                 Uri imageUri = data.getData();
-                Bitmap thumbnail = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+                Bitmap thumbnail = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
                 pilotImage.setImageBitmap(thumbnail);
                 pilotImageText.setText("Image picked from Gallery");
             } catch (Exception e) {
@@ -92,9 +93,13 @@ public class Camera extends AppCompatActivity {
     }
 
     private void cameraIntentCode() {
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_WRITE_STORAGE);
+        } else {
+            Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+            }
         }
     }
 
@@ -107,8 +112,9 @@ public class Camera extends AppCompatActivity {
     }
 
     private void takePicture() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, MY_PERMISSIONS_REQUEST_CAMERA);
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_WRITE_STORAGE);
         } else {
             cameraIntentCode();
         }
