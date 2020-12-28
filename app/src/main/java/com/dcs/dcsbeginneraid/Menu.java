@@ -85,7 +85,8 @@ public class Menu extends AppCompatActivity implements NavigationView.OnNavigati
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.pilot_photo:
-                startActivity(new Intent(Menu.this, MainActivity.class));
+                //Toast.makeText(this, "Logged out!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Menu.this, Camera.class));
                 break;
         }
         return true;

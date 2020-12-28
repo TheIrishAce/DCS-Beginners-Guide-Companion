@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dcs.dcsbeginneraid">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -9,18 +12,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name="com.dcs.dcsbeginneraid.MainActivity">
+        <activity android:name=".Camera"></activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.dcs.dcsbeginneraid.Weapon" />
-        <activity android:name="com.dcs.dcsbeginneraid.Vehicle" />
-        <activity android:name="com.dcs.dcsbeginneraid.Helicopter" />
-        <activity android:name="com.dcs.dcsbeginneraid.Plane" />
-        <activity android:name="com.dcs.dcsbeginneraid.Menu"/>
+        <activity android:name=".Weapon" />
+        <activity android:name=".Vehicle" />
+        <activity android:name=".Helicopter" />
+        <activity android:name=".Plane" />
+        <activity android:name=".Menu" />
     </application>
 
 </manifest>
