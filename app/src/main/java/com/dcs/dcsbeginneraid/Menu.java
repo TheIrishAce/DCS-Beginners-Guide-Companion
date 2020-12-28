@@ -11,7 +11,10 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -19,6 +22,8 @@ import com.google.android.material.navigation.NavigationView;
 public class Menu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout drawer;
     private Toolbar toolbar;
+    private ImageView menuLogo;
+    private Animation animation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +39,10 @@ public class Menu extends AppCompatActivity implements NavigationView.OnNavigati
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        menuLogo = findViewById(R.id.main_logo_imageview);
+        animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.blink);
+        menuLogo.startAnimation(animation);
 
         ImageButton plane_button = (ImageButton)findViewById(R.id.plane_button);
         plane_button.setOnClickListener(new View.OnClickListener() {
