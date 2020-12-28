@@ -34,6 +34,7 @@
                 android:layout_weight="1">
 
                 <TableRow
+                    android:id="@+id/helicopter_ka50_row"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/scroll_gradient">
@@ -53,6 +54,7 @@
                 </TableRow>
 
                 <TableRow
+                    android:id="@+id/helicopter_sa342_row"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/scroll_gradient"
