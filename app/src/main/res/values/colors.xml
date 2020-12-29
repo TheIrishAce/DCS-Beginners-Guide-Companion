@@ -3,6 +3,9 @@
     <color name="colorPrimary">#E62212</color>
     <color name="colorPrimaryDark">#7E150E</color>
     <color name="colorAccent">#5E5E5E</color>
+    <color name="colorButtonPrimary">#334E4E4E</color>
+    <color name="colorButtonPrimaryDark">#33FFFFFF</color>
+    <color name="colorButtonAccent">#FFFFFF</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

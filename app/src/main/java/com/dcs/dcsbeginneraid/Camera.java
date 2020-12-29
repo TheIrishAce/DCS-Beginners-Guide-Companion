@@ -72,7 +72,7 @@ public class Camera extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             pilotImage.setImageBitmap(imageBitmap);
-            pilotImageText.setText("Image captured by Camera");
+            pilotImageText.setText(R.string.image_gallery_text);
             MediaStore.Images.Media.insertImage(getContentResolver(), imageBitmap, imageFileName , "DCS");
 
         }
@@ -84,7 +84,7 @@ public class Camera extends AppCompatActivity {
                 Uri imageUri = data.getData();
                 Bitmap thumbnail = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
                 pilotImage.setImageBitmap(thumbnail);
-                pilotImageText.setText("Image picked from Gallery");
+                pilotImageText.setText(R.string.image_camera_text);
             } catch (Exception e) {
                 e.printStackTrace();
                 Toast.makeText(getApplicationContext(), "Exception: " + e.getMessage(), Toast.LENGTH_SHORT).show();

@@ -20,5 +20,9 @@
     <string name="vehicle_list_title">Lista de vehículos</string>
     <string name="weapon_list_title">Lista de armas</string>
     <string name="ham_menu_title">Guía de formación de DCS</string>
-    <string name="ham_menu_subtitle">Diseñado para pilotos de simuladores de vuelo.</string>
+    <string name="ham_menu_subtitle">Diseñado para pilotos de simuladores de vuelo.</string>.
+    <string name="image_camera_text">Imagen de la cámara</string>
+    <string name="image_gallery_text">Imagen de la galería</string>
+    <string name="pilot_gallery_button">Galería</string>
+    <string name="pilot_camera_button">Cámara</string>
 </resources>

@@ -21,4 +21,8 @@
     <string name="weapon_list_title">Weapon List</string>
     <string name="ham_menu_title">DCS Training Guide</string>
     <string name="ham_menu_subtitle">Designed for flight simulator pilots</string>
+    <string name="image_camera_text">Image from Camera</string>
+    <string name="image_gallery_text">Image from Gallery</string>
+    <string name="pilot_gallery_button">Gallery</string>
+    <string name="pilot_camera_button">Camera</string>
 </resources>
