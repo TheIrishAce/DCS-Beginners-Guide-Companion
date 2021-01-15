@@ -75,6 +75,7 @@
                                     android:id="@+id/plane_button"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
                                     android:background="@drawable/dcs_plane_activity_logo"
                                     android:contentDescription="@string/plane_button"
                                     android:scaleType="fitCenter" />
@@ -104,6 +105,7 @@
                                     android:id="@+id/helicopter_button"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
                                     android:background="@drawable/dcs_helicopter_activity_logo"
                                     android:contentDescription="@string/helicopter_button"
                                     android:scaleType="fitCenter" />
@@ -140,6 +142,7 @@
                                     android:id="@+id/weapon_button"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
                                     android:background="@drawable/dcs_weapon_activity_logo"
                                     android:contentDescription="@string/weapon_button"
                                     android:scaleType="fitCenter" />
@@ -168,6 +171,7 @@
                                     android:id="@+id/vehicle_button"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
                                     android:background="@drawable/dcs_vehicle_activity_logo"
                                     android:contentDescription="@string/vehicle_button"
                                     android:scaleType="fitCenter" />
